@@ -1,0 +1,7 @@
+#netcat -l 9000
+cat
+tac
+tic tac
+great!
+great !
+tic
