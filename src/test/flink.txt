@@ -1,0 +1,1 @@
+./bin/flink run -c WordCount ~/github/flink/build/libs/flink.jar --port 9000

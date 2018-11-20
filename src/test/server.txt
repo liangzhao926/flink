@@ -1,7 +1,4 @@
 #netcat -l 9000
+sdl;afjkl
 cat
-tac
-tic tac
-great!
-great !
-tic
+^C

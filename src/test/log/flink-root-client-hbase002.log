@@ -1,0 +1,58 @@
+2018-11-20 23:23:16,644 INFO  org.apache.flink.client.cli.CliFrontend                       - --------------------------------------------------------------------------------
+2018-11-20 23:23:16,646 INFO  org.apache.flink.client.cli.CliFrontend                       -  Starting Command Line Client (Version: 1.6.2, Rev:3456ad0, Date:17.10.2018 @ 18:46:46 GMT)
+2018-11-20 23:23:16,647 INFO  org.apache.flink.client.cli.CliFrontend                       -  OS current user: root
+2018-11-20 23:23:16,647 INFO  org.apache.flink.client.cli.CliFrontend                       -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2018-11-20 23:23:16,647 INFO  org.apache.flink.client.cli.CliFrontend                       -  JVM: Java HotSpot(TM) 64-Bit Server VM - Oracle Corporation - 1.8/25.191-b12
+2018-11-20 23:23:16,648 INFO  org.apache.flink.client.cli.CliFrontend                       -  Maximum heap size: 1774 MiBytes
+2018-11-20 23:23:16,648 INFO  org.apache.flink.client.cli.CliFrontend                       -  JAVA_HOME: /usr/lib/jvm/java-8-oracle
+2018-11-20 23:23:16,648 INFO  org.apache.flink.client.cli.CliFrontend                       -  No Hadoop Dependency available
+2018-11-20 23:23:16,648 INFO  org.apache.flink.client.cli.CliFrontend                       -  JVM Options:
+2018-11-20 23:23:16,649 INFO  org.apache.flink.client.cli.CliFrontend                       -     -Dlog.file=/usr/local/flink-1.6.2/log/flink-root-client-hbase002.log
+2018-11-20 23:23:16,649 INFO  org.apache.flink.client.cli.CliFrontend                       -     -Dlog4j.configuration=file:/usr/local/flink-1.6.2/conf/log4j-cli.properties
+2018-11-20 23:23:16,649 INFO  org.apache.flink.client.cli.CliFrontend                       -     -Dlogback.configurationFile=file:/usr/local/flink-1.6.2/conf/logback.xml
+2018-11-20 23:23:16,649 INFO  org.apache.flink.client.cli.CliFrontend                       -  Program Arguments:
+2018-11-20 23:23:16,649 INFO  org.apache.flink.client.cli.CliFrontend                       -     run
+2018-11-20 23:23:16,649 INFO  org.apache.flink.client.cli.CliFrontend                       -     -c
+2018-11-20 23:23:16,650 INFO  org.apache.flink.client.cli.CliFrontend                       -     WordCount
+2018-11-20 23:23:16,650 INFO  org.apache.flink.client.cli.CliFrontend                       -     /root/github/flink/build/libs/flink.jar
+2018-11-20 23:23:16,650 INFO  org.apache.flink.client.cli.CliFrontend                       -     --port
+2018-11-20 23:23:16,650 INFO  org.apache.flink.client.cli.CliFrontend                       -     9000
+2018-11-20 23:23:16,650 INFO  org.apache.flink.client.cli.CliFrontend                       -  Classpath: /usr/local/flink-1.6.2/lib/flink-python_2.11-1.6.2.jar:/usr/local/flink-1.6.2/lib/log4j-1.2.17.jar:/usr/local/flink-1.6.2/lib/slf4j-log4j12-1.7.7.jar:/usr/local/flink-1.6.2/lib/flink-dist_2.11-1.6.2.jar:::
+2018-11-20 23:23:16,651 INFO  org.apache.flink.client.cli.CliFrontend                       - --------------------------------------------------------------------------------
+2018-11-20 23:23:16,663 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: jobmanager.rpc.address, localhost
+2018-11-20 23:23:16,663 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: jobmanager.rpc.port, 6123
+2018-11-20 23:23:16,664 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: jobmanager.heap.size, 1024m
+2018-11-20 23:23:16,664 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: taskmanager.heap.size, 1024m
+2018-11-20 23:23:16,664 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2018-11-20 23:23:16,664 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: parallelism.default, 1
+2018-11-20 23:23:16,666 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: rest.port, 8081
+2018-11-20 23:23:16,673 WARN  org.apache.flink.client.cli.CliFrontend                       - Could not load CLI class org.apache.flink.yarn.cli.FlinkYarnSessionCli.
+java.lang.NoClassDefFoundError: org/apache/hadoop/conf/Configuration
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.apache.flink.client.cli.CliFrontend.loadCustomCommandLine(CliFrontend.java:1236)
+	at org.apache.flink.client.cli.CliFrontend.loadCustomCommandLines(CliFrontend.java:1192)
+	at org.apache.flink.client.cli.CliFrontend.main(CliFrontend.java:1118)
+Caused by: java.lang.ClassNotFoundException: org.apache.hadoop.conf.Configuration
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 5 more
+2018-11-20 23:23:16,703 INFO  org.apache.flink.core.fs.FileSystem                           - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2018-11-20 23:23:17,131 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory  - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2018-11-20 23:23:17,178 INFO  org.apache.flink.runtime.security.SecurityUtils               - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2018-11-20 23:23:17,284 INFO  org.apache.flink.client.cli.CliFrontend                       - Running 'run' command.
+2018-11-20 23:23:17,294 INFO  org.apache.flink.client.cli.CliFrontend                       - Building program from JAR file
+2018-11-20 23:23:17,369 WARN  org.apache.flink.configuration.Configuration                  - Config uses deprecated configuration key 'jobmanager.rpc.address' instead of proper key 'rest.address'
+2018-11-20 23:23:17,826 INFO  org.apache.flink.runtime.rest.RestClient                      - Rest client endpoint started.
+2018-11-20 23:23:17,831 INFO  org.apache.flink.client.cli.CliFrontend                       - Starting execution of program
+2018-11-20 23:23:17,832 INFO  org.apache.flink.client.program.rest.RestClusterClient        - Starting program in interactive mode (detached: false)
+2018-11-20 23:23:18,177 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: jobmanager.rpc.address, localhost
+2018-11-20 23:23:18,177 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: jobmanager.rpc.port, 6123
+2018-11-20 23:23:18,177 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: jobmanager.heap.size, 1024m
+2018-11-20 23:23:18,177 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: taskmanager.heap.size, 1024m
+2018-11-20 23:23:18,178 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2018-11-20 23:23:18,178 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: parallelism.default, 1
+2018-11-20 23:23:18,178 INFO  org.apache.flink.configuration.GlobalConfiguration            - Loading configuration property: rest.port, 8081
+2018-11-20 23:23:18,183 INFO  org.apache.flink.client.program.rest.RestClusterClient        - Submitting job c7675852191ddd67c21193a1b973eaf2 (detached: false).

@@ -2,7 +2,8 @@
 *.class
 
 # Log file
-*.log
+# I love log files
+#*.log
 
 # BlueJ files
 *.ctxt
@@ -27,4 +28,4 @@ hs_err_pid*
 .project
 .settings/
 settings.gradle
-
+build/
