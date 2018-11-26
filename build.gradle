@@ -19,9 +19,10 @@ repositories {
 
 dependencies {
     
-    compile "org.apache.flink:flink-java:1.6.+"
-    compile "org.apache.flink:flink-streaming-java_2.11:1.6.+"
+    compile "org.apache.flink:flink-java:1.6.2"
+    compile "org.apache.flink:flink-streaming-java_2.11:1.6.2"
 
-    
+    compile "org.apache.flink:flink-clients_2.11:1.6.2"
+    compile "org.apache.flink:flink-connector-wikiedits_2.11:1.6.2"
 }
 
